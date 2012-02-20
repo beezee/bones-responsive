@@ -4,7 +4,7 @@
 			
 				<div id="inner-content" class="wrap clearfix">
 			
-					<div id="main" class="col620 left first clearfix" role="main">
+					<div id="main" class="updatable col620 left first clearfix" role="main">
 					
 						<h1 class="archive_title h2">
 							<span><?php _e("Posts By:", "bonestheme"); ?></span> 

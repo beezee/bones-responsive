@@ -31,13 +31,23 @@
 		<!--[if (lt IE 9) & (!IEMobile)]>
     		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/css/ie.css">	
 		<![endif]-->
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/library/js/libs/jquery.djax.js"></script>
+		<script type="text/javascript">
+		    jQuery('document').ready(function($) {
+		       $('body').djax('.updatable', ['wp-admin', 'wp-login', '?s=']); 
+			$(window).bind('djaxLoad', function(e, data) {
+				console.log('triggered');
+				console.log(data);
+			});
+		    });
+		</script>	
 	</head>
 	
 	<body <?php body_class(); ?>>
 	
 		<div id="container">
-			
+The time you last loaded this whole site is <?php echo date('r'); ?>			
 			<header role="banner" class="header">
 			
 				<div id="inner-header" class="wrap clearfix">
