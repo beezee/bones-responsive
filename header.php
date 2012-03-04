@@ -37,6 +37,8 @@
 		    jQuery('document').ready(function($) {
 		       $('body').djax('.updatable', ['wp-admin', 'wp-login', '?s=']); 
 			$(window).bind('djaxLoad', function(e, data) {
+				var bodyelem = ($.browser.safari) ? bodyelem = $("body") : bodyelem = $("html,body");
+				bodyelem.scrollTop(0);
 				console.log('triggered');
 				console.log(data);
 			});
